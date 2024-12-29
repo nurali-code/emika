@@ -1,17 +1,151 @@
 @import 'normolize'
+@import 'fonts'
 @import 'elements'
+@import 'footer'
 
-.main
-    margin: 0
-    &__img 
+.hero
+	margin: 0
+	background-repeat: no-repeat
+	background-size: cover
+	background-image: url('../img/hero_bg.jpg')
+	background-position: center center
+	overflow: hidden
+	padding-bottom: 30vw
+	position: relative
+	z-index: 1
+	&::before
+		content: ''
+		display: block
+		width: 18vw
+		height: 18vw
+		background-repeat: no-repeat
+		background-position: center left
+		background-size: contain
+		background-image: url('../img/sakura.png')
+		position: absolute
+		left: 0
+		bottom: 17vw
+	h1
+		font-size: 31vw
+		line-height: 85%
+		margin: 0 auto
+		color: #BA5E63
+		text-align: center
+		white-space: nowrap
+		margin: 0
+		// position: absolute
+		// top: 0
+		// left: 50%
+		transform: translateX(-3%)
 
+	p
+		max-width: fit-content
+		margin: 0 0 0 auto
+		padding: 1.5vw 2.1vw 0
+		text-align: right
+		font-size: 3.13vw
+		line-height: 120%
+		color: #FCD0D3
+		font-weight: bold
 
-iframe 
-    border-radius: 30px
-    position: relative
-    top: -12vw
-    width: 1850px
-    aspect-ratio: 16/8
-    max-width: 90%
-    margin: 0 auto
-    background-color: #eee
+	&__img
+		width: 62vw
+		margin: 0 auto
+		position: absolute
+		top: 8vw
+		left: 50%
+		transform: translateX(-50%)
+		pointer-events: none
+	@media screen and ( max-width: 720px )
+		padding-bottom: 38vw
+		&::before
+			bottom: 25vw
+			width: 22vw
+			height: 22vw
+		h1
+			line-height: 95%
+		p
+			font-size: 4.6vw
+
+		&__img
+			width: 80vw
+			top: 6vw
+			transform: translateX(-67%)
+
+.ext
+	position: relative
+	z-index: 111
+	top: -16vw
+
+	p
+		text-align: center
+		color: white
+		padding: 1.05vw
+		font-size: 1.05vw
+		line-height: 120%
+		font-weight: 500
+		a
+			color: white
+			text-decoration: underline
+
+	@media screen and ( max-width: 720px )
+		top: -20vw
+
+		p
+			padding: 10px 16px
+			font-size: 3.5vw
+
+iframe
+	display: block
+	border-radius: 30px
+	width: 1850px
+	aspect-ratio: 16/8
+	max-width: calc( 100% - 32px )
+	margin: 0 auto
+	background-color: #eee
+	@media screen and ( max-width: 720px )
+		aspect-ratio: 10/16
+
+.how
+	top: -5vw
+	position: relative
+	z-index: 1111
+	padding: 0 16px
+	color: #BA5E63
+	&-wrap
+		max-width: 83vw
+		margin: 0 auto
+		gap: 2vw 0
+
+	.item
+		padding: 2.6vw
+		width: 48%
+		border-radius: 2.87vw
+		background-color: #FCD0D2
+
+	h3
+		font-size: 2.4vw
+		font-weight: 800
+		line-height: 120%
+		margin: 0 0 2vw
+
+	p
+		font-size: 2vw
+		font-weight: 700
+		line-height: 110%
+
+	@media screen and ( max-width: 720px )
+		&-wrap
+			max-width: 100%
+			gap: 4vw 0
+
+		.item
+			padding: 6vw
+			width: 100%
+			border-radius: 6vw
+
+		h3
+			font-size: 5.4vw
+
+		p
+			font-size: 4.5vw
