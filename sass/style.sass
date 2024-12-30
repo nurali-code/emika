@@ -72,6 +72,17 @@
 			top: 6vw
 			transform: translateX(-67%)
 
+iframe
+	display: block
+	border-radius: 30px
+	width: 1850px
+	aspect-ratio: 16/8
+	max-width: calc( 100% - 32px )
+	margin: 0 auto
+	background-color: #0c111c
+	@media screen and ( max-width: 720px )
+		aspect-ratio: 10/16
+
 .ext
 	position: relative
 	z-index: 111
@@ -136,17 +147,6 @@
 	.side
 		margin: 0 0 0 auto
 		width: 17.9vw
-
-iframe
-	display: block
-	border-radius: 30px
-	width: 1850px
-	aspect-ratio: 16/8
-	max-width: calc( 100% - 32px )
-	margin: 0 auto
-	background-color: #eee
-	@media screen and ( max-width: 720px )
-		aspect-ratio: 10/16
 
 .how
 	// top: -5vw
